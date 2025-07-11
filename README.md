@@ -52,10 +52,13 @@ Instagram Login Page is a good implementation for login page.
    - `dashboard.vue` (for dashboard page)
    - `[userId].vue` (dynamic user page)
 
-2. Routing will be automatically handled by Nuxt. It supports file-based routing, and it will look for pages in the `pages/` folder. Here's how the routing works:
+2. Routing will be automatically handled by Nuxt. But it has to be check for the user role first to ensure spesific user can access the related page. Then, it supports file-based routing, and it will look for pages in the `pages/` folder. Here's how the routing works:
    - `/login` → `pages/login.vue`
    - `/dashboard` → `pages/dashboard.vue`
    - `/:userId` → `pages/[userId].vue`
+
+3. Router has to check the user roles to ensure related page is accessable with given roles. If it's not user will be redirected to unauthorized page with caution and single go back button to redirect '/'.
+
 
 ## Use TypeScript with Script Setup
 
